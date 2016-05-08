@@ -29,7 +29,7 @@ function exportTable(tableId, fileName, linkId) {
     var blob = builder.getBlob('data:application/vnd.ms-excel');
     window.navigator.msSaveBlob(blob, fileName + '.xls');
   } else {
-    var element = document.getElementById(buttonId);
+    var element = document.getElementById(linkId);
     element.href = uri + base64(format(template, ctx));
     element.download = fileName + '.xls';
     element.click();
